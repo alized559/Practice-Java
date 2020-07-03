@@ -1,2 +1,2 @@
 # Practice-Java
-This repository represents java code of some excersises
+This repository represents java code for some excersises
