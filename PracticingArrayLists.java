@@ -9,9 +9,20 @@ public class PracticingArrayLists {
   // returns the intersection of List1 and list2
   public static List<Integer> intersect(List<Integer> list1, List<Integer> list2) {
     List<Integer> list3 = new ArrayList<Integer>();
-    for (int i : list1)
-      if (list2.contains(i))
-        list3.add(i);
+    int p1 = 0, p2 = 0;
+    while (p1 < list1.size() && p2 < list2.size()) {
+      int num1 = list1.get(p1);
+      int num2 = list2.get(p2);
+      if (num1 == num2) {
+        list3.add(num1);
+        p1++;
+        p2++;
+      } else if (num1 < num2) {
+        p1++;
+      } else {
+        p2++;
+      }
+    }
     return list3;
   }
 
